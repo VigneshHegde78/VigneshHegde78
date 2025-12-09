@@ -56,29 +56,9 @@ I am currently focusing on **Mobile Development** using React Native and Flutter
 | **[Flow](https://github.com/VigneshHegde78/Flow)** | 💸 A personal finance mobile app for expense tracking. | `React Native` `Expo` |
 | **BookMyPandit** | 🕉️ Connecting users with local Pandits for rituals (In Progress). | `React Native` `Appwrite` |
 | **[XO_Clash](https://github.com/VigneshHegde78/XO_Clash)** | ⚔️ A classic Tic-Tac-Toe game logic with a modern UI. | `Flutter` |
-| **Flappy Bird** | 🐦 A recreation of the classic game with physics logic. | `Flutter` `Flame Engine` |
+| **[Flappy Bird](https://github.com/VigneshHegde78/flappyBird)** | 🐦 A recreation of the classic game with physics logic. | `Flutter` `Flame Engine` |
 | **[Over9kMovies](https://github.com/VigneshHegde78/Over9kMovies)** | 🎬 A movie discovery app that fetches live ratings and details. | `React.js` `API` |
 | **[GamingWebsite](https://github.com/VigneshHegde78/GamingWebsite)** | 🕹️ A responsive landing page designed for gaming enthusiasts. | `HTML/CSS` `JS` |
-
----
-
-### 📊 GitHub Stats
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=VigneshHegde78&theme=dark&hide_border=false&include_all_commits=false&count_private=false" height="150" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=VigneshHegde78&theme=dark&hide_border=true&layout=compact" height="150" />
-</div>
-
-<div align="center">
-  <br/>
-  <img src="https://visitcount.itsvg.in/api?id=VigneshHegde78&icon=5&color=0" />
-</div>
-
-
-### 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=VigneshHegde78&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=VigneshHegde78&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=VigneshHegde78&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
 
 ---
 [![](https://visitcount.itsvg.in/api?id=VigneshHegde78&icon=5&color=0)](https://visitcount.itsvg.in)
