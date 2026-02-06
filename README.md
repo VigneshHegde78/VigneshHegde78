@@ -49,15 +49,14 @@ I am currently focusing on **Mobile Development** using React Native and Flutter
 
 ---
 
-### 📲 Featured Projects
+## ⭐ Featured Projects
 
 | Project | Description | Stack |
 | :--- | :--- | :--- |
-| **[Flow](https://github.com/VigneshHegde78/Flow)** | 💸 A personal finance mobile app for expense tracking. | `React Native` `Expo` |
-| **BookMyPandit** | 🕉️ Connecting users with local Pandits for rituals (In Progress). | `React Native` `Appwrite` |
-| **[XO_Clash](https://github.com/VigneshHegde78/XO_Clash)** | ⚔️ A classic Tic-Tac-Toe game logic with a modern UI. | `Flutter` |
-| **[Flappy Bird](https://github.com/VigneshHegde78/flappyBird)** | 🐦 A recreation of the classic game with physics logic. | `Flutter` `Flame Engine` |
-| **[Over9kMovies](https://github.com/VigneshHegde78/Over9kMovies)** | 🎬 A movie discovery app that fetches live ratings and details. | `React.js` `API` |
+| **[Parsr](https://github.com/VigneshHegde78/Parsr)** | 🧾 On-device receipt scanner that extracts, categorizes, and visualizes expenses using ML-based OCR and smart parsing (offline-first). | `React Native` `Expo` `TypeScript` `ML Kit` |
+| **[Flow](https://github.com/VigneshHegde78/Flow)** | 💸 Personal finance mobile app to track expenses and peer-to-peer debts with local persistence and visual insights. | `React Native` `Expo` |
+| **[Flappy Bird](https://github.com/VigneshHegde78/flappyBird_RN)** | 🐦 Recreation of Flappy Bird focusing on physics, collision detection, and game loops in React Native. | `React Native` `Flame Engine` |
+| **[Over9kMovies](https://github.com/VigneshHegde78/Over9kMovies)** | 🎬 Movie discovery web app with live ratings, search, and detailed metadata using public APIs. | `React.js` `REST API` |
 | **[GamingWebsite](https://github.com/VigneshHegde78/GamingWebsite)** | 🕹️ A responsive landing page designed for gaming enthusiasts. | `HTML/CSS` `JS` |
 
 ---
