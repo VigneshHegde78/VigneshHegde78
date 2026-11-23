@@ -1,42 +1,90 @@
 <div align="center">
 
-# Vignesh Hegde
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg">
+  <img src="assets/banner-light.svg" alt="Vignesh Hegde — Full-Stack Web &amp; Cross-Platform Mobile Developer · Mumbai, IN · Building offline-first apps">
+</picture>
 
-**Full-Stack Web & Cross-Platform Mobile Developer · Mumbai, India**
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20site-A9654B?style=flat-square&labelColor=3E3A34)](https://portfolio-vhx.vercel.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-7E7367?style=flat-square&labelColor=3E3A34)](https://linkedin.com/in/vignesh-hegde-v78)
+[![Email](https://img.shields.io/badge/Email-Say%20hello-7E7367?style=flat-square&labelColor=3E3A34)](mailto:you@example.com)
+[![Public repos](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2FVigneshHegde78&query=%24.public_repos&label=Public%20repos&color=7E7367&labelColor=3E3A34&style=flat-square)](https://github.com/VigneshHegde78?tab=repositories)
 
-I build offline-first mobile apps that stay useful when the network drops.  
-On the web, I build full-stack products with clean interfaces and dependable data.
-
-[Portfolio](https://portfolio-vhx.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/vignesh-hegde-63a20a23a/) · [Email](mailto:you@example.com)
+I build offline-first mobile apps that stay useful when the network drops, and full-stack web products with clean interfaces and dependable data.
 
 </div>
 
 ---
 
-## Tech Stack
-
-| Group | Technologies |
-| :--- | :--- |
-| **Languages** | JavaScript · TypeScript · Python · Dart |
-| **Mobile & Web** | React Native / Expo · Flutter · Next.js · React · Tailwind CSS |
-| **Backend & Data** | Supabase · Firebase · Appwrite · SQL · MongoDB |
-| **Tools** | Git · Linux |
-
----
-
-## At a Glance
-
-| Repositories | Activity |
-| :--- | :--- |
-| ![Public repositories](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2FVigneshHegde78&query=%24.public_repos&label=public%20repos&style=flat-square&color=9e9e9e) | <picture><source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=VigneshHegde78&hide_border=true&theme=transparent&title_color=e6edf3&text_color=9198a1&icon_color=9198a1"><img alt="GitHub stats for VigneshHegde78" src="https://github-readme-stats.vercel.app/api?username=VigneshHegde78&hide_border=true&theme=transparent&title_color=1f2328&text_color=59636e&icon_color=59636e"></picture> |
-
----
-
 ## Selected Work
 
-| Project | What it does | Stack |
-| :--- | :--- | :--- |
-| [Parsr](https://github.com/VigneshHegde78/Parsr) | On-device receipt scanner that turns paper bills into structured expense data with offline OCR. | React Native · Expo · TypeScript · ML Kit |
-| [Drift](https://github.com/VigneshHegde78/Drift) | Browser extension that nudges you about time spent on each website. | JavaScript · HTML · CSS |
-| [FinLedger](https://github.com/VigneshHegde78/FinLedger) | Invoice and payment manager for freelancers and small businesses. | Flutter · Dart · Firebase |
-| [Matrika-Angan](https://github.com/VigneshHegde78/Matrika-Angan) | Full-stack storefront with catalog, cart, and media-rich product pages. | Next.js · React · Supabase · Cloudinary |
+<table>
+<tr>
+<td width="50%" valign="top">
+
+<a href="https://github.com/VigneshHegde78/Parsr"><strong>Parsr ↗</strong></a><br>
+On-device receipt scanner that turns paper bills into structured expense data.<br>
+<code>React Native</code> · <code>Expo</code> · <code>ML Kit</code>
+
+</td>
+<td width="50%" valign="top">
+
+<a href="https://github.com/VigneshHegde78/Drift"><strong>Drift ↗</strong></a><br>
+Mindful browsing extension that keeps screen time visible and intentional.<br>
+<code>JavaScript</code> · <code>Web Extensions</code>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+<a href="https://github.com/VigneshHegde78/FinLedger"><strong>FinLedger ↗</strong></a><br>
+Smart invoice and payment manager for freelancers and small businesses.<br>
+<code>Flutter</code> · <code>Firebase</code>
+
+</td>
+<td width="50%" valign="top">
+
+<a href="https://github.com/VigneshHegde78/Matrika-Angan"><strong>Matrika-Angan ↗</strong></a><br>
+Full-stack storefront with a catalog, cart, and media-rich product pages.<br>
+<code>Next.js</code> · <code>Supabase</code>
+
+</td>
+</tr>
+</table>
+
+---
+
+## Tech Stack
+
+<p align="center"><strong>Languages</strong></p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=js,ts,py,dart&amp;theme=dark">
+    <img src="https://skillicons.dev/icons?i=js,ts,py,dart&amp;theme=light" alt="JavaScript, TypeScript, Python, Dart">
+  </picture>
+</p>
+
+<p align="center"><strong>Web &amp; Mobile</strong></p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=react,nextjs,flutter,tailwind&amp;theme=dark">
+    <img src="https://skillicons.dev/icons?i=react,nextjs,flutter,tailwind&amp;theme=light" alt="React, Next.js, Flutter, Tailwind CSS">
+  </picture>
+</p>
+
+<p align="center"><strong>Data &amp; Tools</strong></p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=supabase,firebase,postgres,mongodb,git,linux&amp;theme=dark">
+    <img src="https://skillicons.dev/icons?i=supabase,firebase,postgres,mongodb,git,linux&amp;theme=light" alt="Supabase, Firebase, PostgreSQL, MongoDB, Git, Linux">
+  </picture>
+</p>
+
+---
+
+<p align="center"><em>Currently exploring: Drift · Atlas · open-source contributions and system design.</em></p>
