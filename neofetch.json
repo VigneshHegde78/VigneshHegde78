@@ -1,0 +1,43 @@
+{
+  "sections": [
+    {
+      "title": "vignesh@fedora",
+      "fields": [
+        { "key": "OS", "value": "Fedora Linux, Android" },
+        { "key": "Uptime", "value": "21 years, 1 month" },
+        { "key": "Host", "value": "Love for Code" },
+        { "key": "Kernel", "value": "Software Developer" },
+        { "key": "IDE", "value": "Ghostty, VS Code" }
+      ]
+    },
+    {
+      "fields": [
+        {
+          "key": "Languages.Programming",
+          "value": "JavaScript, TypeScript, Python, Dart"
+        },
+        {
+          "key": "Languages.Frameworks",
+          "value": "React, Next.js, React Native, Flutter"
+        },
+        { "key": "Languages.Real", "value": "English, Hindi, Marathi" }
+      ]
+    },
+    {
+      "title": "- Contact --",
+      "fields": [
+        { "key": "Email.Personal", "value": "your-email@example.com" },
+        { "key": "LinkedIn", "value": "your-linkedin" }
+      ]
+    },
+    {
+      "title": "- GitHub Stats --",
+      "fields": [
+        { "key": "Repos", "value": "{{repos}} | Stars: {{stars}}" },
+        { "key": "Commits", "value": "{{commits}} | Followers: {{followers}}" },
+        { "key": "Lines of Code", "value": "{{loc}}" }
+      ]
+    }
+  ]
+}
+            
