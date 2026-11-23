@@ -1,63 +1,42 @@
 <div align="center">
-  <h1>Hi, I'm Vignesh! 👋</h1>
-  <h3>Mobile App Developer (React Native & Flutter) | IT Student</h3>
-  <br/>
 
-  <a href="https://instagram.com/vigneshhx_">
-    <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" alt="Instagram"/>
-  </a>
-  <a href="https://linkedin.com/in/vignesh-hegde-63a20a23a">
-    <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-  </a>
+# Vignesh Hegde
+
+**Full-Stack Web & Cross-Platform Mobile Developer · Mumbai, India**
+
+I build offline-first mobile apps that stay useful when the network drops.  
+On the web, I build full-stack products with clean interfaces and dependable data.
+
+[Portfolio](https://portfolio-vhx.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/vignesh-hegde-63a20a23a/) · [Email](mailto:you@example.com)
+
 </div>
 
 ---
 
-### 🚀 What I Do
-I am currently focusing on **Mobile Development** using React Native and Flutter, while managing backend services with **Node.js** and **Firebase**.
+## Tech Stack
+
+| Group | Technologies |
+| :--- | :--- |
+| **Languages** | JavaScript · TypeScript · Python · Dart |
+| **Mobile & Web** | React Native / Expo · Flutter · Next.js · React · Tailwind CSS |
+| **Backend & Data** | Supabase · Firebase · Appwrite · SQL · MongoDB |
+| **Tools** | Git · Linux |
 
 ---
 
-### 🛠️ Tech Stack
+## At a Glance
 
-**Mobile App Development**
-<br/>
-<img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
-<img src="https://img.shields.io/badge/Expo-1B1F23?style=for-the-badge&logo=expo&logoColor=white" />
-<img src="https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white" />
-
-**Web & Frontend**
-<br/>
-<img src="https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" />
-<img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-<img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" />
-<img src="https://img.shields.io/badge/Figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" />
-
-**Backend & Database**
-<br/>
-<img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" />
-<img src="https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34" />
-<img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white" />
-<img src="https://img.shields.io/badge/MySQL-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" />
-
-**Languages**
-<br/>
-<img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" />
-<img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white" />
-<img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" />
-<img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" />
+| Repositories | Activity |
+| :--- | :--- |
+| ![Public repositories](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2FVigneshHegde78&query=%24.public_repos&label=public%20repos&style=flat-square&color=9e9e9e) | <picture><source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=VigneshHegde78&hide_border=true&theme=transparent&title_color=e6edf3&text_color=9198a1&icon_color=9198a1"><img alt="GitHub stats for VigneshHegde78" src="https://github-readme-stats.vercel.app/api?username=VigneshHegde78&hide_border=true&theme=transparent&title_color=1f2328&text_color=59636e&icon_color=59636e"></picture> |
 
 ---
 
-## ⭐ Featured Projects
+## Selected Work
 
-| Project | Description | Stack |
+| Project | What it does | Stack |
 | :--- | :--- | :--- |
-| **[Parsr](https://github.com/VigneshHegde78/Parsr)** | 🧾 On-device receipt scanner that extracts, categorizes, and visualizes expenses using ML-based OCR and smart parsing (offline-first). | `React Native` `Expo` `TypeScript` `ML Kit` |
-| **[Flow](https://github.com/VigneshHegde78/Flow)** | 💸 Personal finance mobile app to track expenses and peer-to-peer debts with local persistence and visual insights. | `React Native` `Expo` |
-| **[Flappy Bird](https://github.com/VigneshHegde78/flappyBird_RN)** | 🐦 Recreation of Flappy Bird focusing on physics, collision detection, and game loops in React Native. | `React Native` `Flame Engine` |
-| **[Over9kMovies](https://github.com/VigneshHegde78/Over9kMovies)** | 🎬 Movie discovery web app with live ratings, search, and detailed metadata using public APIs. | `React.js` `REST API` |
-| **[GamingWebsite](https://github.com/VigneshHegde78/GamingWebsite)** | 🕹️ A responsive landing page designed for gaming enthusiasts. | `HTML/CSS` `JS` |
-
----
-[![](https://visitcount.itsvg.in/api?id=VigneshHegde78&icon=5&color=0)](https://visitcount.itsvg.in)
+| [Parsr](https://github.com/VigneshHegde78/Parsr) | On-device receipt scanner that turns paper bills into structured expense data with offline OCR. | React Native · Expo · TypeScript · ML Kit |
+| [Drift](https://github.com/VigneshHegde78/Drift) | Browser extension that nudges you about time spent on each website. | JavaScript · HTML · CSS |
+| [FinLedger](https://github.com/VigneshHegde78/FinLedger) | Invoice and payment manager for freelancers and small businesses. | Flutter · Dart · Firebase |
+| [Matrika-Angan](https://github.com/VigneshHegde78/Matrika-Angan) | Full-stack storefront with catalog, cart, and media-rich product pages. | Next.js · React · Supabase · Cloudinary |
