@@ -3,7 +3,7 @@ import os
 import sys
 import requests
 
-USERNAME = "VigneshHegde78"
+USERNAME = "vigneshhx"
 TOKEN = os.environ.get("GITHUB_TOKEN")
 
 if not TOKEN:
