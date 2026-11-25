@@ -105,38 +105,31 @@ segments_svg = []
 legend_svg = []
 curr_x = 0
 seg_gap = 4
-# Fixed horizontal padding so the image fits and aligns comfortably
-usable_width = chart_width - 24 
-lx = 12
-ly = 42  # Pushes legend down to guarantee separation from the bar
+lx = 0
+ly = 34
 
-for idx, (name, size) in enumerate(top_langs):
+for name, size in top_langs:
     pct = (size / total_bytes) * 100
-    seg_w = max(8, int((size / total_bytes) * (usable_width - seg_gap * (len(top_langs) - 1))))
+    seg_w = max(8, int((size / total_bytes) * (chart_width - seg_gap * (len(top_langs) - 1))))
     color = lang_colors[name]
-    
-    # Place segments inside padding
-    segments_svg.append(f'<rect x="{curr_x + 12}" y="8" width="{seg_w}" height="8" rx="4" fill="{color}" />')
+
+    segments_svg.append(f'<rect x="{curr_x}" y="8" width="{seg_w}" height="8" rx="4" fill="{color}" />')
     curr_x += seg_w + seg_gap
 
     label_text = f"{name} {round(pct)}%"
-    # Calculate more generous spacing per label
-    item_width = len(label_text) * 7.4 + 26
+    item_width = len(label_text) * 7.2 + 24
 
-    # Wrap to a new row if too long
-    if lx + item_width > (usable_width + 12):
-        lx = 12
-        ly += 22
+    if lx + item_width > chart_width:
+        lx = 0
+        ly += 20
 
-    # Draw legends safely inside image canvas bounds
     legend_svg.append(
-        f'<circle cx="{lx + 5}" cy="{ly - 4.5}" r="4.5" fill="{color}" />'
-        f'<text x="{lx + 15}" y="{ly}" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" font-weight="normal">{label_text}</text>'
+        f'<circle cx="{lx + 4.5}" cy="{ly - 4}" r="4.5" fill="{color}" />'
+        f'<text x="{lx + 14}" y="{ly}" fill="#7d8590" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">{label_text}</text>'
     )
     lx += item_width
 
-# Extra padding on height so viewport doesn't clip descenders
-svg_height = ly + 28
+svg_height = ly + 6
 tools_svg = f"""<svg width="{chart_width}" height="{svg_height}" viewBox="0 0 {chart_width} {svg_height}" xmlns="http://www.w3.org/2000/svg">
   {''.join(segments_svg)}
   {''.join(legend_svg)}
