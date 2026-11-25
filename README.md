@@ -30,13 +30,13 @@ I'm a Mumbai-based software developer focused on building local-first mobile app
 
 <p align="center"><code>02</code> &nbsp; <b>The year in commits</b></p>
 
-<p align="center"><img src="./assets/commits.svg?t=1795628452" alt="The year in commits"</p>
+<p align="center"><img src="./assets/commits.svg?t=1795630823" alt="The year in commits"</p>
 
 <br />
 
 <p align="center"><code>03</code> &nbsp; <b>Tools</b></p>
 
-<p align="center"><img src="./assets/tools.svg?t=1795628452" alt="Tools"</p>
+<p align="center"><img src="./assets/tools.svg?t=1795630823" alt="Tools"</p>
 
 <br/>
 
