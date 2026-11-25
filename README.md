@@ -10,8 +10,8 @@
 <!-- 4-COLUMN STATS ROW (Borderless SVGs matching GitHub Dark #0d1117) -->
 <br>
 <p align="center">
-  <b><!-- REPOS -->10<!-- /REPOS --></b> &nbsp;REPOSITORIES &nbsp;&nbsp;&nbsp;&nbsp;
-  <b><!-- CONTRIBUTIONS -->255<!-- /CONTRIBUTIONS --></b> &nbsp;CONTRIBUTIONS THIS YEAR
+  <code><b><!-- REPOS -->10<!-- /REPOS --></b> &nbsp;REPOSITORIES </code>&nbsp;&nbsp;&nbsp;&nbsp;
+  <code><b><!-- CONTRIBUTIONS -->255<!-- /CONTRIBUTIONS --></b> &nbsp;CONTRIBUTIONS THIS YEAR </code>
 </p>
 
 <!-- SKILLS -->
@@ -30,28 +30,11 @@ I'm a Mumbai-based software developer focused on building local-first mobile app
 
 <p align="center"><code>02</code> &nbsp; <b>Currently building</b></p>
 
-<table align="center">
-  <tr>
-    <td width="360" valign="top">
-      <b><a href="https://github.com/vigneshhx/drift">Drift</a></b> &nbsp; <code>ACTIVE</code>
-      <br /><br />
-      Lightweight browser extension that tracks active screen time and renders a draggable, floating timer pill.
-      <br /><br />
-      <code>JavaScript</code> &nbsp; <code>Browser API</code> &nbsp; <code>CSS</code>
-      <br /><br />
-      <sub><b><!-- DRIFT_COMMITS -->6<!-- /DRIFT_COMMITS --> commits</b> · active development</sub>
-    </td>
-    <td width="360" valign="top">
-      <b><a href="https://github.com/vigneshhx/kipsy">Kipsy</a></b> &nbsp; <code>PRIVATE</code>
-      <br /><br />
-      Local-first personal memory space that captures links, files, and screenshots into a searchable knowledge graph.
-      <br /><br />
-      <code>Flutter</code> &nbsp; <code>Dart</code> &nbsp; <code>Isar</code> &nbsp; <code>Riverpod</code>
-      <br /><br />
-      <sub><b><!-- ATLAS_COMMITS -->48<!-- /ATLAS_COMMITS --> commits</b> · local-first build</sub>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <b>Kipsy</b> &nbsp;·&nbsp; Flutter, Dart, Isar &nbsp;·&nbsp; <b><!-- ATLAS_COMMITS -->48<!-- /ATLAS_COMMITS --></b> commits<br />
+  <sub>Local-first personal memory space that organizes saved items into a searchable knowledge graph.</sub>
+</p>
+
 
 <br/>
 
