@@ -58,11 +58,11 @@ res = response["data"]["user"]
 os.makedirs("assets", exist_ok=True)
 
 # --- 1. GENERATE COMMITS BAR CHART (assets/commits.svg) ---
-cal = (res.get("contributionsCollection") or {}).get("contributionCalendar") or {}
-total_commits = cal.get("totalContributions", 0)
+cal = res["contributionsCollection"]["contributionCalendar"]
+total_commits = cal["totalContributions"]
 weekly_counts = [
     sum(d["contributionCount"] for d in w["contributionDays"])
-    for w in cal.get("weeks", [])
+    for w in cal["weeks"]
 ]
 max_week = max(weekly_counts) if weekly_counts else 1
 
@@ -76,8 +76,10 @@ for i, count in enumerate(weekly_counts):
     color = "#39d353" if ratio > 0.7 else "#26a641" if ratio > 0.35 else "#0e4429" if count > 0 else "#161b22"
     bars_svg.append(f'<rect x="{x}" y="{y}" width="{bar_w}" height="{h}" rx="2" fill="{color}" />')
 
-width = max(len(weekly_counts) * (bar_w + gap), 1)
-commits_svg = f"""<svg width="{width}" height="125" viewBox="0 0 {width} 125" xmlns="http://www.w3.org/2000/svg">
+# Exact width of the commits bar grid (e.g., 53 weeks * 14 - 4 = 738px)
+chart_width = (len(weekly_counts) * (bar_w + gap)) - gap if weekly_counts else 728
+
+commits_svg = f"""<svg width="{chart_width}" height="125" viewBox="0 0 {chart_width} 125" xmlns="http://www.w3.org/2000/svg">
   {''.join(bars_svg)}
   <text x="0" y="112" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">
     {total_commits:,} contributions in the last year · busiest week {max_week}
@@ -102,35 +104,40 @@ top_langs = sorted(lang_totals.items(), key=lambda x: x[1], reverse=True)[:5]
 segments_svg = []
 legend_svg = []
 curr_x = 0
-bar_total_w = 720
 seg_gap = 4
+# Fixed horizontal padding so the image fits and aligns comfortably
+usable_width = chart_width - 24 
+lx = 12
+ly = 42  # Pushes legend down to guarantee separation from the bar
 
-# Dynamic horizontal spacing based on label length so nothing overlaps or clips
-lx = 0
-ly = 38
-
-for name, size in top_langs:
+for idx, (name, size) in enumerate(top_langs):
     pct = (size / total_bytes) * 100
-    seg_w = max(8, int((size / total_bytes) * (bar_total_w - seg_gap * (len(top_langs) - 1))))
+    seg_w = max(8, int((size / total_bytes) * (usable_width - seg_gap * (len(top_langs) - 1))))
     color = lang_colors[name]
-    segments_svg.append(f'<rect x="{curr_x}" y="8" width="{seg_w}" height="8" rx="4" fill="{color}" />')
+    
+    # Place segments inside padding
+    segments_svg.append(f'<rect x="{curr_x + 12}" y="8" width="{seg_w}" height="8" rx="4" fill="{color}" />')
     curr_x += seg_w + seg_gap
 
     label_text = f"{name} {round(pct)}%"
-    item_width = len(label_text) * 7.2 + 24
+    # Calculate more generous spacing per label
+    item_width = len(label_text) * 7.4 + 26
 
-    if lx + item_width > bar_total_w:
-        lx = 0
+    # Wrap to a new row if too long
+    if lx + item_width > (usable_width + 12):
+        lx = 12
         ly += 22
 
+    # Draw legends safely inside image canvas bounds
     legend_svg.append(
-        f'<circle cx="{lx + 5}" cy="{ly - 4}" r="4.5" fill="{color}" />'
-        f'<text x="{lx + 15}" y="{ly}" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5">{label_text}</text>'
+        f'<circle cx="{lx + 5}" cy="{ly - 4.5}" r="4.5" fill="{color}" />'
+        f'<text x="{lx + 15}" y="{ly}" fill="#c9d1d9" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" font-weight="normal">{label_text}</text>'
     )
     lx += item_width
 
-svg_height = ly + 16
-tools_svg = f"""<svg width="100%" viewBox="0 0 {bar_total_w} {svg_height}" xmlns="http://www.w3.org/2000/svg">
+# Extra padding on height so viewport doesn't clip descenders
+svg_height = ly + 28
+tools_svg = f"""<svg width="{chart_width}" height="{svg_height}" viewBox="0 0 {chart_width} {svg_height}" xmlns="http://www.w3.org/2000/svg">
   {''.join(segments_svg)}
   {''.join(legend_svg)}
 </svg>"""
