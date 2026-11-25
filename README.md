@@ -24,13 +24,13 @@
 
 <p><code>03</code> &nbsp; <b>The year in commits</b></p>
 
-![The year in commits](./commits.svg)
+![The year in commits](./assets/commits.svg)
 
 <br />
 
 <p><code>04</code> &nbsp; <b>Tools</b></p>
 
-![Tools](./tools.svg)
+![Tools](./assets/tools.svg)
 
 ---
 
