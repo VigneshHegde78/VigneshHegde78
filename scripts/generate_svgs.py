@@ -40,7 +40,7 @@ query($login: String!) {
         }
       }
     }
-    drift: repository(owner: "vigneshhx", name: "drift") {
+    drift: repository(name: "drift") {
       defaultBranchRef {
         target {
           ... on Commit {
@@ -51,7 +51,7 @@ query($login: String!) {
         }
       }
     }
-    atlas: repository(owner: "vigneshhx", name: "Atlas") {
+    atlas: repository(name: "Atlas") {
       defaultBranchRef {
         target {
           ... on Commit {
