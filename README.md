@@ -10,10 +10,10 @@
 <!-- 4-COLUMN STATS ROW (Borderless SVGs matching GitHub Dark #0d1117) -->
 <br>
 <p align="center">
-  <img src="https://img.shields.io/badge/10-repositories-0d1117?style=for-the-badge&labelColor=0d1117" alt="Repositories" />
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/235-contributions_this_year-0d1117?style=for-the-badge&labelColor=0d1117" alt="Contributions" />
+  <b><!-- REPOS -->10<!-- /REPOS --></b> &nbsp;REPOSITORIES &nbsp;&nbsp;&nbsp;&nbsp;
+  <b><!-- CONTRIBUTIONS -->244<!-- /CONTRIBUTIONS --></b> &nbsp;CONTRIBUTIONS THIS YEAR
 </p>
+
 <!-- SKILLS -->
 
 <a href="https://skillicons.dev">
@@ -28,19 +28,46 @@ I'm a Mumbai-based software developer focused on building local-first mobile app
 
 <br/>
 
-<p align="center"><code>02</code> &nbsp; <b>The year in commits</b></p>
+<p align="center"><code>02</code> &nbsp; <b>Currently building</b></p>
+
+<table align="center">
+  <tr>
+    <td width="360" valign="top">
+      <b><a href="https://github.com/vigneshhx/drift">Drift</a></b> &nbsp; <code>ACTIVE</code>
+      <br /><br />
+      Lightweight browser extension that tracks active screen time and renders a draggable, floating timer pill.
+      <br /><br />
+      <code>JavaScript</code> &nbsp; <code>Browser API</code> &nbsp; <code>CSS</code>
+      <br /><br />
+      <sub><b><!-- DRIFT_COMMITS -->24<!-- /DRIFT_COMMITS --> commits</b> · active development</sub>
+    </td>
+    <td width="360" valign="top">
+      <b><a href="https://github.com/vigneshhx/kipsy">Kipsy</a></b> &nbsp; <code>PRIVATE</code>
+      <br /><br />
+      Local-first personal memory space that captures links, files, and screenshots into a searchable knowledge graph.
+      <br /><br />
+      <code>Flutter</code> &nbsp; <code>Dart</code> &nbsp; <code>Isar</code> &nbsp; <code>Riverpod</code>
+      <br /><br />
+      <sub><b><!-- ATLAS_COMMITS -->48<!-- /ATLAS_COMMITS --> commits</b> · local-first build</sub>
+    </td>
+  </tr>
+</table>
+
+<br/>
+
+<p align="center"><code>03</code> &nbsp; <b>The year in commits</b></p>
 
 <p align="center"><img src="./assets/commits.svg?t=1795631724" alt="The year in commits"</p>
 
 <br />
 
-<p align="center"><code>03</code> &nbsp; <b>Tools</b></p>
+<p align="center"><code>04</code> &nbsp; <b>Tools</b></p>
 
 <p align="center"><img src="./assets/tools.svg?t=1795631724" alt="Tools"</p>
 
 <br/>
 
-<p align="center"><code>04</code> &nbsp; <b>Connect with me</b></p>
+<p align="center"><code>05</code> &nbsp; <b>Connect with me</b></p>
 
 <p align="center">
   <a href="https://github.com/vigneshhx">

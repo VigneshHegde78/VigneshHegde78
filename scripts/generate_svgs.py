@@ -1,5 +1,5 @@
-from html import escape
 import os
+import re
 import sys
 import requests
 
@@ -12,6 +12,7 @@ if not TOKEN:
 
 HEADERS = {"Authorization": f"Bearer {TOKEN}"}
 
+# Update repo names below if they differ on GitHub (case-insensitive on GitHub API)
 QUERY = """
 query($login: String!) {
   user(login: $login) {
@@ -25,7 +26,8 @@ query($login: String!) {
         }
       }
     }
-    repositories(first: 100, ownerAffiliations: OWNER, isFork: false) {
+    repositories(first: 100, ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC) {
+      totalCount
       nodes {
         languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
           edges {
@@ -33,6 +35,28 @@ query($login: String!) {
             node {
               name
               color
+            }
+          }
+        }
+      }
+    }
+    drift: repository(owner: "vigneshhx", name: "drift") {
+      defaultBranchRef {
+        target {
+          ... on Commit {
+            history {
+              totalCount
+            }
+          }
+        }
+      }
+    }
+    atlas: repository(owner: "vigneshhx", name: "Atlas") {
+      defaultBranchRef {
+        target {
+          ... on Commit {
+            history {
+              totalCount
             }
           }
         }
@@ -48,13 +72,11 @@ response = requests.post(
     headers=HEADERS,
 ).json()
 
-if "errors" in response or not response.get("data", {}).get("user"):
+if "errors" in response and not response.get("data", {}).get("user"):
     print("GitHub API Error:", response)
     sys.exit(1)
 
 res = response["data"]["user"]
-
-# Ensure assets directory exists on the runner
 os.makedirs("assets", exist_ok=True)
 
 # --- 1. GENERATE COMMITS BAR CHART (assets/commits.svg) ---
@@ -76,12 +98,11 @@ for i, count in enumerate(weekly_counts):
     color = "#39d353" if ratio > 0.7 else "#26a641" if ratio > 0.35 else "#0e4429" if count > 0 else "#161b22"
     bars_svg.append(f'<rect x="{x}" y="{y}" width="{bar_w}" height="{h}" rx="2" fill="{color}" />')
 
-# Exact width of the commits bar grid (e.g., 53 weeks * 14 - 4 = 738px)
-chart_width = (len(weekly_counts) * (bar_w + gap)) - gap if weekly_counts else 728
+chart_width = (len(weekly_counts) * (bar_w + gap)) - gap if weekly_counts else 738
 
 commits_svg = f"""<svg width="{chart_width}" height="125" viewBox="0 0 {chart_width} 125" xmlns="http://www.w3.org/2000/svg">
   {''.join(bars_svg)}
-  <text x="0" y="112" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">
+  <text x="0" y="112" fill="#7d8590" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">
     {total_commits:,} contributions in the last year · busiest week {max_week}
   </text>
 </svg>"""
@@ -137,3 +158,46 @@ tools_svg = f"""<svg width="{chart_width}" height="{svg_height}" viewBox="0 0 {c
 
 with open("assets/tools.svg", "w") as f:
     f.write(tools_svg)
+
+# --- 3. AUTO-UPDATE COUNTS IN README.md ---
+repo_count = res["repositories"]["totalCount"]
+
+def get_commit_count(repo_obj):
+    if not repo_obj or not repo_obj.get("defaultBranchRef"):
+        return None
+    return repo_obj["defaultBranchRef"]["target"]["history"]["totalCount"]
+
+drift_commits = get_commit_count(res.get("drift"))
+atlas_commits = get_commit_count(res.get("atlas"))
+
+with open("README.md", "r") as f:
+    readme = f.read()
+
+readme = re.sub(
+    r"<!-- REPOS -->.*?<!-- /REPOS -->",
+    f"<!-- REPOS -->{repo_count}<!-- /REPOS -->",
+    readme,
+)
+readme = re.sub(
+    r"<!-- CONTRIBUTIONS -->.*?<!-- /CONTRIBUTIONS -->",
+    f"<!-- CONTRIBUTIONS -->{total_commits}<!-- /CONTRIBUTIONS -->",
+    readme,
+)
+
+if drift_commits is not None:
+    readme = re.sub(
+        r"<!-- DRIFT_COMMITS -->.*?<!-- /DRIFT_COMMITS -->",
+        f"<!-- DRIFT_COMMITS -->{drift_commits}<!-- /DRIFT_COMMITS -->",
+        readme,
+    )
+if atlas_commits is not None:
+    readme = re.sub(
+        r"<!-- ATLAS_COMMITS -->.*?<!-- /ATLAS_COMMITS -->",
+        f"<!-- ATLAS_COMMITS -->{atlas_commits}<!-- /ATLAS_COMMITS -->",
+        readme,
+    )
+
+with open("README.md", "w") as f:
+    f.write(readme)
+
+print("Successfully updated SVGs and README.md counts.")

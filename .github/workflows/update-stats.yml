@@ -1,7 +1,7 @@
 name: Update Profile SVGs
 on:
   schedule:
-    - cron: "0 0 * * 0"
+    - cron: "0 0 * * *"
   workflow_dispatch:
 
 permissions:
@@ -28,5 +28,5 @@ jobs:
           TIMESTAMP=$(date +%s)
           sed -i -E "s#(assets/(commits|tools)\.svg)(\?[a-zA-Z0-9_=]+)?#\1?t=${TIMESTAMP}#g" README.md
           git add assets/commits.svg assets/tools.svg README.md
-          git commit -m "Update profile charts" || exit 0
+          git commit -m "Update profile stats and charts" || exit 0
           git push
