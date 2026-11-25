@@ -11,7 +11,7 @@
 <br>
 <p align="center">
   <b><!-- REPOS -->10<!-- /REPOS --></b> &nbsp;REPOSITORIES &nbsp;&nbsp;&nbsp;&nbsp;
-  <b><!-- CONTRIBUTIONS -->244<!-- /CONTRIBUTIONS --></b> &nbsp;CONTRIBUTIONS THIS YEAR
+  <b><!-- CONTRIBUTIONS -->255<!-- /CONTRIBUTIONS --></b> &nbsp;CONTRIBUTIONS THIS YEAR
 </p>
 
 <!-- SKILLS -->
@@ -39,7 +39,7 @@ I'm a Mumbai-based software developer focused on building local-first mobile app
       <br /><br />
       <code>JavaScript</code> &nbsp; <code>Browser API</code> &nbsp; <code>CSS</code>
       <br /><br />
-      <sub><b><!-- DRIFT_COMMITS -->24<!-- /DRIFT_COMMITS --> commits</b> · active development</sub>
+      <sub><b><!-- DRIFT_COMMITS -->6<!-- /DRIFT_COMMITS --> commits</b> · active development</sub>
     </td>
     <td width="360" valign="top">
       <b><a href="https://github.com/vigneshhx/kipsy">Kipsy</a></b> &nbsp; <code>PRIVATE</code>
@@ -57,13 +57,13 @@ I'm a Mumbai-based software developer focused on building local-first mobile app
 
 <p align="center"><code>03</code> &nbsp; <b>The year in commits</b></p>
 
-<p align="center"><img src="./assets/commits.svg?t=1795631724" alt="The year in commits"</p>
+<p align="center"><img src="./assets/commits.svg?t=1795634084" alt="The year in commits"</p>
 
 <br />
 
 <p align="center"><code>04</code> &nbsp; <b>Tools</b></p>
 
-<p align="center"><img src="./assets/tools.svg?t=1795631724" alt="Tools"</p>
+<p align="center"><img src="./assets/tools.svg?t=1795634084" alt="Tools"</p>
 
 <br/>
 
