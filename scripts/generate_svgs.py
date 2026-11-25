@@ -1,3 +1,4 @@
+from html import escape
 import os
 import sys
 import requests
@@ -57,11 +58,11 @@ res = response["data"]["user"]
 os.makedirs("assets", exist_ok=True)
 
 # --- 1. GENERATE COMMITS BAR CHART (assets/commits.svg) ---
-cal = res["contributionsCollection"]["contributionCalendar"]
-total_commits = cal["totalContributions"]
+cal = (res.get("contributionsCollection") or {}).get("contributionCalendar") or {}
+total_commits = cal.get("totalContributions", 0)
 weekly_counts = [
     sum(d["contributionCount"] for d in w["contributionDays"])
-    for w in cal["weeks"]
+    for w in cal.get("weeks", [])
 ]
 max_week = max(weekly_counts) if weekly_counts else 1
 
@@ -75,7 +76,7 @@ for i, count in enumerate(weekly_counts):
     color = "#39d353" if ratio > 0.7 else "#26a641" if ratio > 0.35 else "#0e4429" if count > 0 else "#161b22"
     bars_svg.append(f'<rect x="{x}" y="{y}" width="{bar_w}" height="{h}" rx="2" fill="{color}" />')
 
-width = len(weekly_counts) * (bar_w + gap)
+width = max(len(weekly_counts) * (bar_w + gap), 1)
 commits_svg = f"""<svg width="{width}" height="125" viewBox="0 0 {width} 125" xmlns="http://www.w3.org/2000/svg">
   {''.join(bars_svg)}
   <text x="0" y="112" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">
@@ -90,3 +91,26 @@ with open("assets/commits.svg", "w") as f:
 lang_totals = {}
 lang_colors = {}
 for repo in res["repositories"]["nodes"]:
+    for edge in repo["languages"]["edges"]:
+        language = edge["node"]["name"]
+        lang_totals[language] = lang_totals.get(language, 0) + edge["size"]
+        lang_colors[language] = edge["node"]["color"]
+
+total_size = sum(lang_totals.values())
+segments = []
+x = 0
+for language, size in sorted(lang_totals.items(), key=lambda item: item[1], reverse=True):
+    segment_width = size / total_size * 600 if total_size else 0
+    color = lang_colors[language] or "#8b949e"
+    segments.append(
+        f'<rect x="{x:.2f}" y="0" width="{segment_width:.2f}" height="16" fill="{escape(color, quote=True)}">'
+        f"<title>{escape(language)}: {size} bytes</title></rect>"
+    )
+    x += segment_width
+
+tools_svg = f"""<svg width="600" height="16" viewBox="0 0 600 16" xmlns="http://www.w3.org/2000/svg">
+  {''.join(segments)}
+</svg>"""
+
+with open("assets/tools.svg", "w") as f:
+    f.write(tools_svg)
