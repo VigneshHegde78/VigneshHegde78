@@ -11,7 +11,7 @@
 <br>
 <p align="center">
   <code><b><!-- REPOS -->10<!-- /REPOS --></b> &nbsp;REPOSITORIES </code>&nbsp;&nbsp;&nbsp;&nbsp;
-  <code><b><!-- CONTRIBUTIONS -->255<!-- /CONTRIBUTIONS --></b> &nbsp;CONTRIBUTIONS THIS YEAR </code>
+  <code><b><!-- CONTRIBUTIONS -->257<!-- /CONTRIBUTIONS --></b> &nbsp;CONTRIBUTIONS THIS YEAR </code>
 </p>
 
 <!-- SKILLS -->
@@ -40,13 +40,13 @@ I'm a Mumbai-based software developer focused on building local-first mobile app
 
 <p align="center"><code>03</code> &nbsp; <b>The year in commits</b></p>
 
-<p align="center"><img src="./assets/commits.svg?t=1795634084" alt="The year in commits"</p>
+<p align="center"><img src="./assets/commits.svg?t=1795674680" alt="The year in commits"</p>
 
 <br />
 
 <p align="center"><code>04</code> &nbsp; <b>Tools</b></p>
 
-<p align="center"><img src="./assets/tools.svg?t=1795634084" alt="Tools"</p>
+<p align="center"><img src="./assets/tools.svg?t=1795674680" alt="Tools"</p>
 
 <br/>
 
